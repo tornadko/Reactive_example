@@ -1,4 +1,4 @@
-package example.reactive.alex.reactiveexample;
+package example.reactive.alex.reactiveexample.model;
 
 import trikita.jedux.Action;
 import trikita.jedux.Store;
@@ -13,13 +13,15 @@ public class State {
         this.count = count;
     }
 
-    static class Reducer implements Store.Reducer<Action<ActionType, ?>, State> {
-        public State reduce(Action<ActionType, ?> a, State oldState) {
-            switch (a.type) {
+    public static class Reducer implements Store.Reducer<Action<ActionType, ?>, State> {
+        public State reduce(Action<ActionType, ?> action, State oldState) {
+            switch (action.type) {
                 case INCREMENT:
                     return new State(oldState.count + 1);
                 case DECREMENT:
                     return new State(oldState.count - 1 );
+                case PLUS:
+                    return new State(oldState.count + (Integer) action.value);
             }
             return oldState;
         }

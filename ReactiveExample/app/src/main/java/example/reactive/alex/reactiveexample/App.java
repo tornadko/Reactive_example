@@ -2,6 +2,8 @@ package example.reactive.alex.reactiveexample;
 
 import android.app.Application;
 
+import example.reactive.alex.reactiveexample.model.ActionType;
+import example.reactive.alex.reactiveexample.model.State;
 import trikita.jedux.Action;
 import trikita.jedux.Store;
 

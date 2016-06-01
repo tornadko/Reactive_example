@@ -1,4 +1,4 @@
-package example.reactive.alex.reactiveexample;
+package example.reactive.alex.reactiveexample.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import example.reactive.alex.reactiveexample.App;
+import example.reactive.alex.reactiveexample.model.ActionType;
 import trikita.anvil.RenderableView;
 import trikita.jedux.Action;
 
