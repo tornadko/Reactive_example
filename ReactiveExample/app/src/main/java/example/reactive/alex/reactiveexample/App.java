@@ -3,6 +3,8 @@ package example.reactive.alex.reactiveexample;
 import android.app.Application;
 
 import example.reactive.alex.reactiveexample.model.ActionType;
+import example.reactive.alex.reactiveexample.model.ImmutableState;
+import example.reactive.alex.reactiveexample.model.Reducer;
 import example.reactive.alex.reactiveexample.model.State;
 import trikita.jedux.Action;
 import trikita.jedux.Store;
@@ -20,7 +22,7 @@ public class App extends Application {
         super.onCreate();
         App.instance = this;
 
-        this.store = new Store<>(new State.Reducer(), new State(0));
+        this.store = new Store<>(new Reducer(), ImmutableState.builder().count(0).build());
     }
 
     public static State getState() {

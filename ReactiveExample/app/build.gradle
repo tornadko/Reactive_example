@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: "android-apt"
 
 android {
     compileSdkVersion 23
@@ -32,4 +33,7 @@ dependencies {
     compile 'co.trikita:anvil-sdk19:0.3.1'
     compile 'com.github.trikita:jedux:-SNAPSHOT'
     compile 'com.github.trikita:promote:-SNAPSHOT'
+    apt "org.immutables:value:2.2.5"
+    provided "org.immutables:value:2.2.5"
+    provided "org.immutables:builder:2.2.5"
 }

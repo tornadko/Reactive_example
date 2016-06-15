@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
                         o(textView(),
                                 margin(0, 30, 0, 40),
-                                text("Hello. Total count:" + String.valueOf(App.getState().count))),
+                                text("Hello. Total count:" + String.valueOf(App.getState().count()))),
                         o(button(),
                                 text("+"),
                                 margin(0, 0, 0, 20),
