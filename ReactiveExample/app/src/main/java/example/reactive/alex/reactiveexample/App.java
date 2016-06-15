@@ -20,14 +20,7 @@ public class App extends Application {
         super.onCreate();
         App.instance = this;
 
-        this.store = new Store(new State.Reducer(), new State(0));
-
-//        this.store.subscribe(new Runnable() {
-//            @Override
-//            public void run() {
-//                Anvil.render();
-//            }
-//        });
+        this.store = new Store<>(new State.Reducer(), new State(0));
     }
 
     public static State getState() {
